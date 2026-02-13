@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Control Panel - Rubens</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        html, body { 
+            height: 100%; 
+            margin: 0; 
+        }
+        /* El nav ocupa toda la pantalla */
+        .nav-link { 
+            transition: all 0.3s; 
+            border: 2px solid black !important;
+            margin-bottom: 15px; /* Aquí está la separación que buscabas */
+        }
+        /* Color cuando el botón está seleccionado */
+        .nav-link.active {
+            background-color: #0d6efd !important;
+            border-color: #0d6efd !important;
+        }
+        .breadcrumb { margin-bottom: 0.5rem; padding: 0; }
+    </style>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-4 col-lg-3 p-3" style="background-color: #403f3f; min-height: 100vh">
+                <div class="p-3 text-white text-center fw-bold fs-4 mb-4">GYM RUBENS</div>
+
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <button class="nav-link active p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-dashboard" type="button">
+                        <i class="bi bi-house fs-3 me-3 text-white"></i>
+                        <span class="h4 mb-0 text-white">Dashboard</span>
+                    </button>
+
+                    <button class="nav-link p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-tienda" type="button">
+                        <i class="bi bi-cup-hot fs-3 me-3 text-white"></i>
+                        <span class="h4 mb-0 text-white">Tienda</span>
+                    </button>
+
+                    <button class="nav-link p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-inventario" type="button">
+                        <i class="bi bi-tools fs-3 me-3 text-white"></i>
+                        <span class="h4 mb-0 text-white">Inventario</span>
+                    </button>
+
+                    <button class="nav-link p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-instalaciones" type="button">
+                        <i class="bi bi-tools fs-3 me-3 text-white"></i>
+                        <span class="h4 mb-0 text-white">Instalaciones</span>
+                    </button>
+                </div>
+
+                <button class="nav-link p-3 d-flex align-items-center w-100 bg-transparent text-start" 
+                        data-bs-toggle="modal" data-bs-target="#Personal_contratado" type="button">
+                    <i class="bi bi-person-badge fs-3 me-3 text-white"></i>
+                    <span class="h4 mb-0 text-white">Staff / Seguridad</span>
+                </button>
+
+            </nav>
+                
+            <main class="col-md-8 col-lg-9 p-5 bg-white">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="tab-dashboard" role="tabpanel">
+                        <nav aria-label="breadcrumb" style="height: 40px;">
+                            <ol class="breadcrumb mb-0"> <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Dashboard</a></li>
+                            </ol>
+                        </nav>
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h1 class="fw-bold text-dark">Dashboard</h1>
+                            <span class="badge bg-primary p-2">Miercoles, 2026</span>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <button class="btn btn-primary bg-success-subtle text-dark border border-success" type="button" data-bs-toggle="collapse" data-bs-target="#aforoGimnasio" style="margin: 10px;">
+                                Ver ocupacion de salas
+                            </button>
+                            
+                            <div class="collapse" id="aforoGimnasio">
+                                <div class="row g-3">
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <div class="card shadow-sm h-100">
+                                            <div class="card-body">
+                                                <h6>Sala de musculacion</h6>
+                                                <div class="progress" style="height: 20px;">
+                                                    <div class="progress-bar bg-danger" style="width: 85%;">
+                                                        85%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <div class="card shadow-sm h-100">
+                                            <div class="card-body">
+                                                <h6>Zona de cardio</h6>
+                                                <div class="progress" style="height: 20px;">
+                                                    <div class="progress-bar bg-warning text-dark" style="width: 55%;">
+                                                        55%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <div class="card shadow-sm h-100">
+                                            <div class="card-body">
+                                                <h6>Sala de actividades</h6>
+                                                <div class="progress" style="height: 20px;">
+                                                    <div class="progress-bar bg-success" style="width: 30%;">
+                                                        30%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <div class="card shadow-sm h-100">
+                                            <div class="card-body">
+                                                <h6>Piscina Climatizada</h6>
+                                                <div class="progress" style="height: 20px;">
+                                                    <div class="progress-bar bg-success" style="width: 40%;">
+                                                        40%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-4 mt-2">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
+                                    
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <div class="bg-primary bg-opacity-10 p-2 rounded-2">
+                                                    <i class="bi bi-lightning-charge-fill fs-4"></i>
+                                                </div>
+                                                <span class="badge rounded-pill bg-success-subtle text-success px-3">
+                                                    Confirmada
+                                                </span>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h5 class="fw-bold text-dark mb-1">CrossFit</h5>
+                                                <div class="text-muted small d-flex align-items-center gap-2">
+                                                    <span><i class="bi bi-calendar3"></i> Hoy</span>
+                                                    <span><i class="bi bi-clock"></i> 18:00h</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                                <div>
+                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="fw-bold text-dark">
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>6 <span class="text-muted">/ 20</span>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary rounded-pill px-4 fw-bold">
+                                                    Gestionar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
+                                    
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <div class="bg-primary bg-opacity-10 p-2 rounded-2">
+                                                    <i class="bi bi-hammer fs-4"></i>
+                                                </div>
+                                                <span class="badge rounded-pill bg-success-subtle text-success px-3">
+                                                    Confirmada
+                                                </span>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h5 class="fw-bold text-dark mb-1">Fuerza y alta intensidad</h5>
+                                                <div class="text-muted small d-flex align-items-center gap-2">
+                                                    <span><i class="bi bi-calendar3"></i> Hoy</span>
+                                                    <span><i class="bi bi-clock"></i> 20:00h</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                                <div>
+                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="fw-bold text-dark">
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>3 <span class="text-muted">/ 20</span>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary rounded-pill px-4 fw-bold">
+                                                    Gestionar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
+                                    
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <div class="bg-primary bg-opacity-10 p-2 rounded-2">
+                                                    <i class="bi bi-lightning-charge-fill fs-4"></i>
+                                                </div>
+                                                <span class="badge rounded-pill bg-success-subtle text-success px-3">
+                                                    Confirmada
+                                                </span>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h5 class="fw-bold text-dark mb-1">BodyPump</h5>
+                                                <div class="text-muted small d-flex align-items-center gap-2">
+                                                    <span><i class="bi bi-calendar3"></i> Mañana</span>
+                                                    <span><i class="bi bi-clock"></i> 18:00h</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                                <div>
+                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="fw-bold text-dark">
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>10 <span class="text-muted">/ 20</span>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary rounded-pill px-4 fw-bold">
+                                                    Gestionar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
+                                    
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <div class="bg-primary bg-opacity-10 p-2 rounded-2">
+                                                    <i class="bi bi-stopwatch-fill fs-4"></i>
+                                                </div>
+                                                <span class="badge rounded-pill bg-success-subtle text-success px-3">
+                                                    Confirmada
+                                                </span>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h5 class="fw-bold text-dark mb-1">HIIT</h5>
+                                                <div class="text-muted small d-flex align-items-center gap-2">
+                                                    <span><i class="bi bi-calendar3"></i> Hoy</span>
+                                                    <span><i class="bi bi-clock"></i> 18:00h</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                                <div>
+                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="fw-bold text-dark">
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>17 <span class="text-muted">/ 20</span>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary rounded-pill px-4 fw-bold">
+                                                    Gestionar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
+                                    
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <div class="bg-primary bg-opacity-10 p-2 rounded-2">
+                                                    <i class="bi bi-bicycle fs-4"></i>
+                                                </div>
+                                                <span class="badge rounded-pill bg-success-subtle text-success px-3">
+                                                    Confirmada
+                                                </span>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h5 class="fw-bold text-dark mb-1">Spinning</h5>
+                                                <div class="text-muted small d-flex align-items-center gap-2">
+                                                    <span><i class="bi bi-calendar3"></i> Mañana</span>
+                                                    <span><i class="bi bi-clock"></i> 20:00h</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                                <div>
+                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="fw-bold text-dark">
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>7 <span class="text-muted">/ 20</span>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary rounded-pill px-4 fw-bold">
+                                                    Gestionar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
+                                    
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <div class="bg-primary bg-opacity-10 p-2 rounded-2">
+                                                    <i class="bi bi-music-note-beamed fs-4"></i>
+                                                </div>
+                                                <span class="badge rounded-pill bg-success-subtle text-success px-3">
+                                                    Confirmada
+                                                </span>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h5 class="fw-bold text-dark mb-1">Zumba</h5>
+                                                <div class="text-muted small d-flex align-items-center gap-2">
+                                                    <span><i class="bi bi-calendar3"></i> Viernes</span>
+                                                    <span><i class="bi bi-clock"></i> 18:00h</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                                <div>
+                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="fw-bold text-dark">
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>12 <span class="text-muted">/ 20</span>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary rounded-pill px-4 fw-bold">
+                                                    Gestionar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
+                                    
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <div class="bg-primary bg-opacity-10 p-2 rounded-2">
+                                                    <i class="bi bi-flower3 fs-4"></i>
+                                                </div>
+                                                <span class="badge rounded-pill bg-success-subtle text-success px-3">
+                                                    Confirmada
+                                                </span>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h5 class="fw-bold text-dark mb-1">Yoga</h5>
+                                                <div class="text-muted small d-flex align-items-center gap-2">
+                                                    <span><i class="bi bi-calendar3"></i> Viernes</span>
+                                                    <span><i class="bi bi-clock"></i> 18:00h</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                                                <div>
+                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="fw-bold text-dark">
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>9 <span class="text-muted">/ 20</span>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary rounded-pill px-4 fw-bold">
+                                                    Gestionar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade p-4 bg-white" id="tab-tienda" role="tabpanel">
+                        
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb small">
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Tienda</li>
+                            </ol>
+                        </nav>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h2 class="fw-bold">Suplementos y Proteínas</h2>
+                                <p class="text-muted">Gestión de stock de la tienda del gimnasio.</p>
+                            </div>
+                            <button class="btn btn-success shadow-sm">
+                                <i class="bi bi-plus-square-fill me-2"></i>Nuevo producto
+                            </button>
+                        </div>
+
+                        <div class="table-responsive-lg shadow-sm">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="ps-3">Imagen</th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Categoria</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Stock</th>
+                                        <th scope="col">Estado</th>
+                                        <th class="text-end pe-3">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-3">
+                                            <img src="/imagenes_tienda/suplemento_gym_1.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                        </td>
+                                            <td>
+                                                <span class="text-primary" style="cursor:pointer;" 
+                                                        data-bs-toggle="popover" 
+                                                        data-bs-trigger="hover" 
+                                                        title="Especificaciones" 
+                                                        data-bs-content="Contiene 24g de proteina por toma, 5g de BCAAs y es baja en azucar. Ideal para post-entreno.">
+                                                    Proteína Whey 2kg
+                                                </span>
+                                            </td>
+                                            <td>Suplementos</td>
+                                            <td>11,99€</td>
+                                            <td>30 uds</td>
+                                            <td>
+                                                <span class="text-success">
+                                                    <i class="bi bi-check-circle-fill"></i> Disponible
+                                                </span>
+                                            </td>
+                                            <td class="text-end pe-3">
+                                                <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-square"></i></button>
+                                                <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                    <td class="ps-3">
+                                            <img src="/imagenes_tienda/suplemento_gym_2.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                    </td>
+                                        <td>
+                                            <span class="text-primary" style="cursor:pointer;" 
+                                                    data-bs-toggle="popover" 
+                                                    data-bs-trigger="hover" 
+                                                    title="Especificaciones" 
+                                                    data-bs-content="Proteína de liberación lenta (hasta 7 horas). Perfecta para tomar antes de dormir y evitar el catabolismo durante la noche.">
+                                                Caseina Micelar
+                                            </span>
+                                        </td>
+                                        <td>Suplementos</td>
+                                        <td>45,99€</td>
+                                        <td>12 uds</td>
+                                        <td>
+                                            <span class="text-success">
+                                                <i class="bi bi-check-circle-fill"></i> Disponible
+                                            </span>
+                                        </td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-square"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3">
+                                            <img src="/imagenes_tienda/suplemento_gym_3.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                        </td>
+                                        <td>
+                                            <span class="text-primary" style="cursor:pointer;" 
+                                                    data-bs-toggle="popover" 
+                                                    data-bs-trigger="hover" 
+                                                    title="Especificaciones" 
+                                                    data-bs-content="Mezcla de proteínas de guisante y arroz de alta biodisponibilidad. 100% libre de lácteos y rica en fibra.">
+                                                Proteína Vegana
+                                            </span>
+                                        </td>
+                                        <td>Suplementos</td>
+                                        <td>8€</td>
+                                        <td>0 uds</td>
+                                        <td>
+                                            <span class="text-danger">
+                                                <i class="bi bi-x-circle-fill"></i> Agotado
+                                            </span>
+                                        </td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-square"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3">
+                                            <img src="/imagenes_tienda/suplemento_gym_4.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                        </td>
+                                        <td>
+                                            <span class="text-primary" style="cursor:pointer;" 
+                                                    data-bs-toggle="popover" 
+                                                    data-bs-trigger="hover" 
+                                                    title="Especificaciones" 
+                                                    data-bs-content="Proteína de máxima pureza y absorción ultra rápida. Sin lactosa, sin grasas y con el mayor filtrado del mercado.">
+                                                ISO Hydrolyzed
+                                            </span>
+                                        </td>
+                                        <td>Suplementos</td>
+                                        <td>45,99€</td>
+                                        <td>12 uds</td>
+                                        <td>
+                                            <span class="text-success">
+                                                <i class="bi bi-check-circle-fill"></i> Disponible
+                                            </span>
+                                        </td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-square"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3">
+                                            <img src="/imagenes_tienda/suplemento_gym_5.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                        </td>
+                                        <td>
+                                            <span class="text-primary" style="cursor:pointer;" 
+                                                    data-bs-toggle="popover" 
+                                                    data-bs-trigger="hover" 
+                                                    title="Especificaciones" 
+                                                    data-bs-content="Fórmula avanzada con cafeína y beta-alanina para máximo enfoque, energía y congestión muscular durante tu rutina.">
+                                                Pre-Entreno "Explosive Energy"
+                                            </span>
+                                        </td>
+                                        <td>Suplementos</td>
+                                        <td>7,99€</td>
+                                        <td>0 uds</td>
+                                        <td>
+                                            <span class="text-danger">
+                                                <i class="bi bi-x-circle-fill"></i> Agotado
+                                            </span>
+                                        </td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-square"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3">
+                                            <img src="/imagenes_tienda/suplemento_gym_6.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                        </td>
+                                        <td>
+                                            <span class="text-primary" style="cursor:pointer;" 
+                                                    data-bs-toggle="popover" 
+                                                    data-bs-trigger="hover" 
+                                                    title="Especificaciones" 
+                                                    data-bs-content="Aminoácido clave para la recuperación de las fibras musculares y el apoyo al sistema inmunitario tras entrenos intensos.">
+                                                L-Glutamina
+                                            </span>
+                                        </td>
+                                        <td>Suplementos</td>
+                                        <td>5,99€</td>
+                                        <td>129 uds</td>
+                                        <td>
+                                            <span class="text-success">
+                                                <i class="bi bi-check-circle-fill"></i> Disponible
+                                            </span>
+                                        </td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-square"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3">
+                                            <img src="/imagenes_tienda/suplemento_gym_7.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                        </td>
+                                        <td>
+                                            <span class="text-primary" style="cursor:pointer;" 
+                                                    data-bs-toggle="popover" 
+                                                    data-bs-trigger="hover" 
+                                                    title="Especificaciones" 
+                                                    data-bs-content="Complejo completo de vitaminas y minerales esenciales para optimizar el rendimiento diario y la salud general.">
+                                                Multivitamínico "Daily Health"
+                                            </span>
+                                        </td>
+                                        <td>Suplementos</td>
+                                        <td>45,99€</td>
+                                        <td>2 uds</td>
+                                        <td>
+                                            <span class="text-warning">
+                                                <i class="bi bi-exclamation-triangle-fill"></i> Casi agotado
+                                            </span>
+                                        </td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-square"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3">
+                                            <img src="/imagenes_tienda/suplemento_gym_8.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                        </td>
+                                        <td>
+                                            <span class="text-primary" style="cursor:pointer;" 
+                                                    data-bs-toggle="popover" 
+                                                    data-bs-trigger="hover" 
+                                                    title="Especificaciones" 
+                                                    data-bs-content="Mantenimiento óptimo de articulaciones, cartílagos y piel. Reforzado con Vitamina C para una mejor absorción.">
+                                                Colágeno con Ácido Hialurónico
+                                            </span>
+                                        </td>
+                                        <td>Suplementos</td>
+                                        <td>15,99€</td>
+                                        <td>19 uds</td>
+                                        <td>
+                                            <span class="text-success">
+                                                <i class="bi bi-check-circle-fill"></i> Disponible
+                                            </span>
+                                        </td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-square"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3">
+                                            <img src="/imagenes_tienda/suplemento_gym_9.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                        </td>
+                                        <td>
+                                            <span class="text-primary" style="cursor:pointer;" 
+                                                    data-bs-toggle="popover" 
+                                                    data-bs-trigger="hover" 
+                                                    title="Especificaciones" 
+                                                    data-bs-content="Estimula el metabolismo y aumenta la temperatura corporal para favorecer la oxidación de grasas durante el cardio.">
+                                                Quemador de Grasa (Termogénico)
+                                            </span>
+                                        </td>
+                                        <td>Suplementos</td>
+                                        <td>55,99€</td>
+                                        <td>1 uds</td>
+                                        <td>
+                                            <span class="text-warning">
+                                                <i class="bi bi-exclamation-triangle-fill"></i> Casi agotado
+                                            </span>
+                                        </td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil-square"></i></button>
+                                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab-inventario" role="tabpanel">
+
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb small">
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Inventario</li>
+                            </ol>
+                        </nav>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h2 class="fw-bold text-primary">Estado de Maquinaria</h2>
+                                <p class="text-muted">Control de activos y mantenimiento tecnico</p>
+                            </div>
+
+                            <button class="btn btn-primary shadow-sm">
+                                <i class="bi bi-plus-lg me-2"></i>Registrar Material
+                            </button>
+                        </div>
+
+                        <div class="table-responsive shadow-sm">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Material</th>
+                                        <th scope="col">Categoria</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Estado</th>
+                                        <th class="text-end">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">1</td>
+                                            <td>Mancuernas 10kg</td>
+                                            <td>
+                                                <span class="badge bg-light text-dark">Peso libre</span>
+                                            </td>
+                                            <td>12</td>
+                                            <td>Buen estado</td>
+                                            <td class="text-end pe-3">
+                                                <button class="btn btn-sm btn-outline-secondary" title="Historial"><i class="bi bi-clock-history"></i></button>
+                                                <button class="btn btn-sm btn-outline-primary" title="Editar"><i class="bi bi-pencil"></i></button>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">2</th>
+                                        <td>Cinta de correr T500</td>
+                                        <td>
+                                            <span class="badge bg-light text-dark">Cardio</span>
+                                        </td>
+                                        <td>4</td>
+                                        <td>En mantenimiento</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary" title="Historial"><i class="bi bi-clock-history"></i></button>
+                                            <button class="btn btn-sm btn-outline-primary" title="Editar"><i class="bi bi-pencil"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">3</td>
+                                        <td>Mancuernas 20kg</td>
+                                        <td>
+                                            <span class="badge bg-light text-dark">Peso libre</span>
+                                        </td>
+                                        <td>8</td>
+                                        <td>Buen estado</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary" title="Historial"><i class="bi bi-clock-history"></i></button>
+                                            <button class="btn btn-sm btn-outline-primary" title="Editar"><i class="bi bi-pencil"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">4</th>
+                                        <td>Barras olimpicas</td>
+                                        <td>
+                                            <span class="badge bg-light text-dark">Peso libre</span>
+                                        </td>
+                                        <td>20</td>
+                                        <td>Buen estado</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary" title="Historial"><i class="bi bi-clock-history"></i></button>
+                                            <button class="btn btn-sm btn-outline-primary" title="Editar"><i class="bi bi-pencil"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">5</th>
+                                        <td>Maquina de remo</td>
+                                        <td>
+                                            <span class="badge bg-light text-dark">Funcional</span>
+                                        </td>
+                                        <td>10</td>
+                                        <td>Buen estado</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary" title="Historial"><i class="bi bi-clock-history"></i></button>
+                                            <button class="btn btn-sm btn-outline-primary" title="Editar"><i class="bi bi-pencil"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">6</th>
+                                        <td>Bicicleta spinning</td>
+                                        <td>
+                                            <span class="badge bg-light text-dark">Cardio</span>
+                                        </td>
+                                        <td>120</td>
+                                        <td>Buen estado</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary" title="Historial"><i class="bi bi-clock-history"></i></button>
+                                            <button class="btn btn-sm btn-outline-primary" title="Editar"><i class="bi bi-pencil"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">7</th>
+                                        <td>Cajón Pliométrico</td>
+                                        <td>
+                                            <span class="badge bg-light text-dark">Funcional</span>
+                                        </td>
+                                        <td>20</td>
+                                        <td>Nuevo</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary" title="Historial"><i class="bi bi-clock-history"></i></button>
+                                            <button class="btn btn-sm btn-outline-primary" title="Editar"><i class="bi bi-pencil"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">8</th>
+                                        <td>Rack de Poleas Cruzadas</td>
+                                        <td>
+                                            <span class="badge bg-light text-dark">Funcional</span>
+                                        </td>
+                                        <td>30</td>
+                                        <td>Revision pendiente</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary" title="Historial"><i class="bi bi-clock-history"></i></button>
+                                            <button class="btn btn-sm btn-outline-primary" title="Editar"><i class="bi bi-pencil"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">9</th>
+                                        <td>Sacos Bulgaros</td>
+                                        <td>
+                                            <span class="badge bg-light text-dark">Funcional</span>
+                                        </td>
+                                        <td>8</td>
+                                        <td>Operativo</td>
+                                        <td class="text-end pe-3">
+                                            <button class="btn btn-sm btn-outline-secondary" title="Historial"><i class="bi bi-clock-history"></i></button>
+                                            <button class="btn btn-sm btn-outline-primary" title="Editar"><i class="bi bi-pencil"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    
+                    
+                    <div class="tab-pane fade" id="tab-instalaciones" role="tabpanel" class="p-4 bg-white">
+
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb small">
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Dashboard</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Instalaciones</li>
+                            </ol>
+                        </nav>
+
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h2 class="fw-bold text-dark">Gestion de Instalaciones</h2>
+                                <p class="text-muted">Supervision de salas y areas del club</p>
+                            </div>
+                            <button class="btn btn-outline-primary">
+                                <i class="bi bi-camera"></i> Añadir Area
+                            </button>
+                        </div>
+
+                        <div class="row g-4"> 
+                            <div class="col-md-6">
+                                <div class="card shadow-sm h-100 border-0">
+                                    <div class="position-relative">
+                                        <img src="/imagenes_instalaciones/imagen_zona_musculacion.png" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Musculación">
+                                        <span class="badge bg-success position-absolute top-0 end-0 m-3">Operativo</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h5 class="card-title fw-bold">Zona de Musculacion</h5>
+                                            <button class="btn btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                                        </div>
+                                        <p class="card-text small text-muted">Área equipada con máquinas de fuerza y peso libre para entrenamiento intenso.</p>
+                                        <div class="d-flex gap-2">
+                                            <span class="badge bg-light text-dark border"><i class="bi bi-thermometer-half me-1"></i>22°C</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card shadow-sm h-100 border-0">
+                                    <div class="position-relative">
+                                        <img src="/imagenes_instalaciones/imagen_piscina.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Piscina">
+                                        <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">Limpieza en curso</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h5 class="card-title fw-bold">Piscina Climatizada</h5>
+                                            <button class="btn btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                                        </div>
+                                        <p class="card-text small text-muted">Piscina de 25 metros para nado libre y clases de aquagym.</p>
+                                        <div class="d-flex gap-2">
+                                            <span class="badge bg-light text-dark border"><i class="bi bi-droplet me-1"></i>pH 7.2</span>
+                                            <span class="badge bg-light text-dark border"><i class="bi bi-thermometer-snow me-1"></i>27°C</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row g-4"> 
+                            <div class="col-md-6">
+                                <div class="card shadow-sm h-100 border-0">
+                                    <div class="position-relative">
+                                        <img src="/imagenes_instalaciones/sala_actividades.webp" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Musculación">
+                                        <span class="badge bg-success position-absolute top-0 end-0 m-3">Operativo</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h5 class="card-title fw-bold">Sala de actividades</h5>
+                                            <button class="btn btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                                        </div>
+                                        <p class="card-text small text-muted">Espacio diseñado para fomentar la interacción, el aprendizaje o el bienestar físico y creativo</p>
+                                        <div class="d-flex gap-2">
+                                            <span class="badge bg-light text-dark border"><i class="bi bi-thermometer-half me-1"></i>22°C</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card shadow-sm h-100 border-0">
+                                    <div class="position-relative">
+                                        <img src="/imagenes_instalaciones/zona_cardio.png" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Piscina">
+                                        <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">Limpieza en curso</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <h5 class="card-title fw-bold">Zona de cardio</h5>
+                                            <button class="btn btn-sm btn-light"><i class="bi bi-pencil"></i></button>
+                                        </div>
+                                        <p class="card-text small text-muted">Espacio equipado con maquinaria de última generacion para entrenamiento aeróbico, incluyendo cintas, elípticas y bicicletas.</p>
+                                        <div class="d-flex gap-2">
+                                            <span class="badge bg-light text-dark border"><i class="bi bi-snow me-1"></i>Aire Acond.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div> 
+            </main>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="Personal_contratado" tabindex="-1">
+        <div class="modal-dialog modal-lg"> 
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Personal del Gimnasio</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">
+                        Lista de empleados y seguridad actualmente en turno
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Puesto</th>
+                                    <th>Turno</th>
+                                    <th>Contacto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Rubén Cameo</strong></td>
+                                    <td><span class="badge bg-primary">Administrador</span></td>
+                                    <td>Mañana</td>
+                                    <td>admin@gymrubens.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Carlos Garde</td>
+                                    <td><span class="badge bg-warning text-dark">Seguridad</span></td>
+                                    <td>Tarde/Noche</td>
+                                    <td>carlos@gymrubens.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Marta Fitness</td>
+                                    <td><span class="badge bg-info text-dark">Monitora</span></td>
+                                    <td>Mañana</td>
+                                    <td>marta@gymrubens.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+</body>
+</html>
