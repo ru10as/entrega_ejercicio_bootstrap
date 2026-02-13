@@ -12,51 +12,55 @@
             height: 100%; 
             margin: 0; 
         }
-        /* El nav ocupa toda la pantalla */
         .nav-link { 
-            transition: all 0.3s; 
-            border: 2px solid black !important;
-            margin-bottom: 15px; /* Aquí está la separación que buscabas */
+            border: 2px solid black;
+            margin-bottom: 15px;
         }
-        /* Color cuando el botón está seleccionado */
         .nav-link.active {
-            background-color: #0d6efd !important;
-            border-color: #0d6efd !important;
+            background-color: #0d6efd;
+            border-color: #0d6efd;
         }
-        .breadcrumb { margin-bottom: 0.5rem; padding: 0; }
+        .breadcrumb { 
+            padding: 0; 
+        }
     </style>
 </head>
 <body>
     
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-md-4 col-lg-3 p-3" style="background-color: #403f3f; min-height: 100vh">
-                <div class="p-3 text-white text-center fw-bold fs-4 mb-4">GYM RUBENS</div>
+            <nav class="col-md-4 col-lg-3 p-3" style="background-color: #191616; min-height: 100vh">
+                <div class="d-flex justify-content-start">
+                    <img src="./imagen_logo/logo_gimnasio.png" alt="logo_gimnasio" class="img-fluid" style="width: 65px; height: 60px;">
+                </div>
+                <div class="d-flex justify-content-center p-3 text-white text-center fw-bold fs-4 mb-4">
+                    GYM RUBENS
+                </div>
 
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
-                    <button class="nav-link active p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-dashboard" type="button">
+                    <button class="nav-link active p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-dashboard" type="button" style="border: 2px solid white;">
                         <i class="bi bi-house fs-3 me-3 text-white"></i>
                         <span class="h4 mb-0 text-white">Dashboard</span>
                     </button>
 
-                    <button class="nav-link p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-tienda" type="button">
+                    <button class="nav-link p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-tienda" type="button" style="border: 2px solid white;">
                         <i class="bi bi-cup-hot fs-3 me-3 text-white"></i>
                         <span class="h4 mb-0 text-white">Tienda</span>
                     </button>
 
-                    <button class="nav-link p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-inventario" type="button">
+                    <button class="nav-link p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-inventario" type="button" style="border: 2px solid white;">
                         <i class="bi bi-tools fs-3 me-3 text-white"></i>
                         <span class="h4 mb-0 text-white">Inventario</span>
                     </button>
 
-                    <button class="nav-link p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-instalaciones" type="button">
+                    <button class="nav-link p-3 d-flex align-items-center" data-bs-toggle="pill" data-bs-target="#tab-instalaciones" type="button" style="border: 2px solid white;">
                         <i class="bi bi-tools fs-3 me-3 text-white"></i>
                         <span class="h4 mb-0 text-white">Instalaciones</span>
                     </button>
                 </div>
 
                 <button class="nav-link p-3 d-flex align-items-center w-100 bg-transparent text-start" 
-                        data-bs-toggle="modal" data-bs-target="#Personal_contratado" type="button">
+                        data-bs-toggle="modal" data-bs-target="#Personal_contratado" type="button" style="border: 2px solid white;">
                     <i class="bi bi-person-badge fs-3 me-3 text-white"></i>
                     <span class="h4 mb-0 text-white">Staff / Seguridad</span>
                 </button>
@@ -67,12 +71,17 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="tab-dashboard" role="tabpanel">
                         <nav aria-label="breadcrumb" style="height: 40px;">
-                            <ol class="breadcrumb mb-0"> <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Dashboard</a></li>
+                            <ol class="breadcrumb mb-0"> 
+                                <li class="breadcrumb-item">
+                                    <a href="#" class="text-decoration-none">Dashboard</a>
+                                </li>
                             </ol>
                         </nav>
 
                         <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h1 class="fw-bold text-dark">Dashboard</h1>
+                            <h1 class="fw-bold text-dark">
+                                Dashboard
+                            </h1>
                             <span class="badge bg-primary p-2">Miercoles, 2026</span>
                         </div>
                         
@@ -86,7 +95,9 @@
                                     <div class="col-12 col-md-6 col-lg-3">
                                         <div class="card shadow-sm h-100">
                                             <div class="card-body">
-                                                <h6>Sala de musculacion</h6>
+                                                <h6>
+                                                    Sala de musculacion
+                                                </h6>
                                                 <div class="progress" style="height: 20px;">
                                                     <div class="progress-bar bg-danger" style="width: 85%;">
                                                         85%
@@ -99,7 +110,9 @@
                                     <div class="col-12 col-md-6 col-lg-3">
                                         <div class="card shadow-sm h-100">
                                             <div class="card-body">
-                                                <h6>Zona de cardio</h6>
+                                                <h6>
+                                                    Zona de cardio
+                                                </h6>
                                                 <div class="progress" style="height: 20px;">
                                                     <div class="progress-bar bg-warning text-dark" style="width: 55%;">
                                                         55%
@@ -113,7 +126,9 @@
                                     <div class="col-12 col-md-6 col-lg-3">
                                         <div class="card shadow-sm h-100">
                                             <div class="card-body">
-                                                <h6>Sala de actividades</h6>
+                                                <h6>
+                                                    Sala de actividades
+                                                </h6>
                                                 <div class="progress" style="height: 20px;">
                                                     <div class="progress-bar bg-success" style="width: 30%;">
                                                         30%
@@ -127,7 +142,9 @@
                                     <div class="col-12 col-md-6 col-lg-3">
                                         <div class="card shadow-sm h-100">
                                             <div class="card-body">
-                                                <h6>Piscina Climatizada</h6>
+                                                <h6>
+                                                    Piscina Climatizada
+                                                </h6>
                                                 <div class="progress" style="height: 20px;">
                                                     <div class="progress-bar bg-success" style="width: 40%;">
                                                         40%
@@ -142,7 +159,6 @@
                             <div class="row g-4 mt-2">
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
-                                    
                                         <div class="card-body p-4">
                                             <div class="d-flex justify-content-between align-items-start mb-3">
                                                 <div class="bg-primary bg-opacity-10 p-2 rounded-2">
@@ -154,18 +170,28 @@
                                             </div>
 
                                             <div class="mb-4">
-                                                <h5 class="fw-bold text-dark mb-1">CrossFit</h5>
+                                                <h5 class="fw-bold text-dark mb-1">
+                                                    CrossFit
+                                                </h5>
                                                 <div class="text-muted small d-flex align-items-center gap-2">
-                                                    <span><i class="bi bi-calendar3"></i> Hoy</span>
-                                                    <span><i class="bi bi-clock"></i> 18:00h</span>
+                                                    <span>
+                                                        <i class="bi bi-calendar3"></i> Hoy
+                                                    </span>
+                                                    <span>
+                                                        <i class="bi bi-clock"></i> 18:00h
+                                                    </span>
                                                 </div>
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                                                 <div>
-                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="text-muted small">
+                                                        Inscritos
+                                                    </div>
                                                     <div class="fw-bold text-dark">
-                                                        <i class="bi bi-people-fill text-primary me-1"></i>6 <span class="text-muted">/ 20</span>
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>6 
+                                                        <span class="text-muted">/ 20
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <button class="btn btn-primary rounded-pill px-4 fw-bold">
@@ -179,7 +205,6 @@
 
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
-                                    
                                         <div class="card-body p-4">
                                             <div class="d-flex justify-content-between align-items-start mb-3">
                                                 <div class="bg-primary bg-opacity-10 p-2 rounded-2">
@@ -191,18 +216,27 @@
                                             </div>
 
                                             <div class="mb-4">
-                                                <h5 class="fw-bold text-dark mb-1">Fuerza y alta intensidad</h5>
+                                                <h5 class="fw-bold text-dark mb-1">
+                                                    Fuerza y alta intensidad
+                                                </h5>
                                                 <div class="text-muted small d-flex align-items-center gap-2">
-                                                    <span><i class="bi bi-calendar3"></i> Hoy</span>
-                                                    <span><i class="bi bi-clock"></i> 20:00h</span>
+                                                    <span>
+                                                        <i class="bi bi-calendar3"></i> Hoy
+                                                    </span>
+                                                    <span>
+                                                        <i class="bi bi-clock"></i> 20:00h
+                                                    </span>
                                                 </div>
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                                                 <div>
-                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="text-muted small">
+                                                        Inscritos
+                                                    </div>
                                                     <div class="fw-bold text-dark">
-                                                        <i class="bi bi-people-fill text-primary me-1"></i>3 <span class="text-muted">/ 20</span>
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>3 
+                                                        <span class="text-muted">/ 20</span>
                                                     </div>
                                                 </div>
                                                 <button class="btn btn-primary rounded-pill px-4 fw-bold">
@@ -214,10 +248,8 @@
                                 </div>
 
 
-
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
-                                    
                                         <div class="card-body p-4">
                                             <div class="d-flex justify-content-between align-items-start mb-3">
                                                 <div class="bg-primary bg-opacity-10 p-2 rounded-2">
@@ -229,18 +261,27 @@
                                             </div>
 
                                             <div class="mb-4">
-                                                <h5 class="fw-bold text-dark mb-1">BodyPump</h5>
+                                                <h5 class="fw-bold text-dark mb-1">
+                                                    BodyPump
+                                                </h5>
                                                 <div class="text-muted small d-flex align-items-center gap-2">
-                                                    <span><i class="bi bi-calendar3"></i> Mañana</span>
-                                                    <span><i class="bi bi-clock"></i> 18:00h</span>
+                                                    <span>
+                                                        <i class="bi bi-calendar3"></i> Mañana
+                                                    </span>
+                                                    <span>
+                                                        <i class="bi bi-clock"></i> 18:00h
+                                                    </span>
                                                 </div>
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                                                 <div>
-                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="text-muted small">
+                                                        Inscritos
+                                                    </div>
                                                     <div class="fw-bold text-dark">
-                                                        <i class="bi bi-people-fill text-primary me-1"></i>10 <span class="text-muted">/ 20</span>
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>10 
+                                                        <span class="text-muted">/ 20</span>
                                                     </div>
                                                 </div>
                                                 <button class="btn btn-primary rounded-pill px-4 fw-bold">
@@ -252,10 +293,8 @@
                                 </div>
 
 
-
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
-                                    
                                         <div class="card-body p-4">
                                             <div class="d-flex justify-content-between align-items-start mb-3">
                                                 <div class="bg-primary bg-opacity-10 p-2 rounded-2">
@@ -267,18 +306,27 @@
                                             </div>
 
                                             <div class="mb-4">
-                                                <h5 class="fw-bold text-dark mb-1">HIIT</h5>
+                                                <h5 class="fw-bold text-dark mb-1">
+                                                    HIIT
+                                                </h5>
                                                 <div class="text-muted small d-flex align-items-center gap-2">
-                                                    <span><i class="bi bi-calendar3"></i> Hoy</span>
-                                                    <span><i class="bi bi-clock"></i> 18:00h</span>
+                                                    <span>
+                                                        <i class="bi bi-calendar3"></i> Hoy
+                                                    </span>
+                                                    <span>
+                                                        <i class="bi bi-clock"></i> 18:00h
+                                                    </span>
                                                 </div>
                                             </div>
 
                                             <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                                                 <div>
-                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="text-muted small">
+                                                        Inscritos
+                                                    </div>
                                                     <div class="fw-bold text-dark">
-                                                        <i class="bi bi-people-fill text-primary me-1"></i>17 <span class="text-muted">/ 20</span>
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>17 
+                                                        <span class="text-muted">/ 20</span>
                                                     </div>
                                                 </div>
                                                 <button class="btn btn-primary rounded-pill px-4 fw-bold">
@@ -288,8 +336,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
 
 
                                 <div class="col-12 col-md-6 col-lg-4">
@@ -306,10 +352,16 @@
                                             </div>
 
                                             <div class="mb-4">
-                                                <h5 class="fw-bold text-dark mb-1">Spinning</h5>
+                                                <h5 class="fw-bold text-dark mb-1">
+                                                    Spinning
+                                                </h5>
                                                 <div class="text-muted small d-flex align-items-center gap-2">
-                                                    <span><i class="bi bi-calendar3"></i> Mañana</span>
-                                                    <span><i class="bi bi-clock"></i> 20:00h</span>
+                                                    <span><i class="bi bi-calendar3"></i> 
+                                                        Mañana
+                                                    </span>
+                                                    <span>
+                                                        <i class="bi bi-clock"></i> 20:00h
+                                                    </span>
                                                 </div>
                                             </div>
 
@@ -317,7 +369,8 @@
                                                 <div>
                                                     <div class="text-muted small">Inscritos</div>
                                                     <div class="fw-bold text-dark">
-                                                        <i class="bi bi-people-fill text-primary me-1"></i>7 <span class="text-muted">/ 20</span>
+                                                        <i class="bi bi-people-fill text-primary me-1"></i>7 
+                                                        <span class="text-muted">/ 20</span>
                                                     </div>
                                                 </div>
                                                 <button class="btn btn-primary rounded-pill px-4 fw-bold">
@@ -329,11 +382,8 @@
                                 </div>
 
 
-
-
                                 <div class="col-12 col-md-6 col-lg-4">
-                                    <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">
-                                    
+                                    <div class="card border-0 shadow-sm h-100 overflow-hidden" style="border-radius: 15px;">        
                                         <div class="card-body p-4">
                                             <div class="d-flex justify-content-between align-items-start mb-3">
                                                 <div class="bg-primary bg-opacity-10 p-2 rounded-2">
@@ -345,7 +395,9 @@
                                             </div>
 
                                             <div class="mb-4">
-                                                <h5 class="fw-bold text-dark mb-1">Zumba</h5>
+                                                <h5 class="fw-bold text-dark mb-1">
+                                                    Zumba
+                                                </h5>
                                                 <div class="text-muted small d-flex align-items-center gap-2">
                                                     <span><i class="bi bi-calendar3"></i> Viernes</span>
                                                     <span><i class="bi bi-clock"></i> 18:00h</span>
@@ -366,8 +418,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
 
 
                                 <div class="col-12 col-md-6 col-lg-4">
@@ -393,7 +443,9 @@
 
                                             <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                                                 <div>
-                                                    <div class="text-muted small">Inscritos</div>
+                                                    <div class="text-muted small">
+                                                        Inscritos
+                                                    </div>
                                                     <div class="fw-bold text-dark">
                                                         <i class="bi bi-people-fill text-primary me-1"></i>9 <span class="text-muted">/ 20</span>
                                                     </div>
@@ -446,7 +498,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="ps-3">
-                                            <img src="/imagenes_tienda/suplemento_gym_1.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                            <img src="./imagenes_tienda/suplemento_gym_1.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
                                         </td>
                                             <td>
                                                 <span class="text-primary" style="cursor:pointer;" 
@@ -472,7 +524,7 @@
                                     </tr>
                                     <tr>
                                     <td class="ps-3">
-                                            <img src="/imagenes_tienda/suplemento_gym_2.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                            <img src="./imagenes_tienda/suplemento_gym_2.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
                                     </td>
                                         <td>
                                             <span class="text-primary" style="cursor:pointer;" 
@@ -498,7 +550,7 @@
                                     </tr>
                                     <tr>
                                         <td class="ps-3">
-                                            <img src="/imagenes_tienda/suplemento_gym_3.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                            <img src="./imagenes_tienda/suplemento_gym_3.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
                                         </td>
                                         <td>
                                             <span class="text-primary" style="cursor:pointer;" 
@@ -524,7 +576,7 @@
                                     </tr>
                                     <tr>
                                         <td class="ps-3">
-                                            <img src="/imagenes_tienda/suplemento_gym_4.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                            <img src="./imagenes_tienda/suplemento_gym_4.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
                                         </td>
                                         <td>
                                             <span class="text-primary" style="cursor:pointer;" 
@@ -550,7 +602,7 @@
                                     </tr>
                                     <tr>
                                         <td class="ps-3">
-                                            <img src="/imagenes_tienda/suplemento_gym_5.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                            <img src="./imagenes_tienda/suplemento_gym_5.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
                                         </td>
                                         <td>
                                             <span class="text-primary" style="cursor:pointer;" 
@@ -576,7 +628,7 @@
                                     </tr>
                                     <tr>
                                         <td class="ps-3">
-                                            <img src="/imagenes_tienda/suplemento_gym_6.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                            <img src="./imagenes_tienda/suplemento_gym_6.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
                                         </td>
                                         <td>
                                             <span class="text-primary" style="cursor:pointer;" 
@@ -602,7 +654,7 @@
                                     </tr>
                                     <tr>
                                         <td class="ps-3">
-                                            <img src="/imagenes_tienda/suplemento_gym_7.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                            <img src="./imagenes_tienda/suplemento_gym_7.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
                                         </td>
                                         <td>
                                             <span class="text-primary" style="cursor:pointer;" 
@@ -628,7 +680,7 @@
                                     </tr>
                                     <tr>
                                         <td class="ps-3">
-                                            <img src="/imagenes_tienda/suplemento_gym_8.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                            <img src="./imagenes_tienda/suplemento_gym_8.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
                                         </td>
                                         <td>
                                             <span class="text-primary" style="cursor:pointer;" 
@@ -654,7 +706,7 @@
                                     </tr>
                                     <tr>
                                         <td class="ps-3">
-                                            <img src="/imagenes_tienda/suplemento_gym_9.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
+                                            <img src="./imagenes_tienda/suplemento_gym_9.png" class="rounded" style="width: 40px; height: 40px; object-fit: cover;">
                                         </td>
                                         <td>
                                             <span class="text-primary" style="cursor:pointer;" 
@@ -865,7 +917,7 @@
                             <div class="col-md-6">
                                 <div class="card shadow-sm h-100 border-0">
                                     <div class="position-relative">
-                                        <img src="/imagenes_instalaciones/imagen_zona_musculacion.png" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Musculación">
+                                        <img src="./imagenes_instalaciones/imagen_zona_musculacion.png" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Musculación">
                                         <span class="badge bg-success position-absolute top-0 end-0 m-3">Operativo</span>
                                     </div>
                                     <div class="card-body">
@@ -884,7 +936,7 @@
                             <div class="col-md-6">
                                 <div class="card shadow-sm h-100 border-0">
                                     <div class="position-relative">
-                                        <img src="/imagenes_instalaciones/imagen_piscina.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Piscina">
+                                        <img src="./imagenes_instalaciones/imagen_piscina.jpg" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Piscina">
                                         <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">Limpieza en curso</span>
                                     </div>
                                     <div class="card-body">
@@ -907,7 +959,7 @@
                             <div class="col-md-6">
                                 <div class="card shadow-sm h-100 border-0">
                                     <div class="position-relative">
-                                        <img src="/imagenes_instalaciones/sala_actividades.webp" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Musculación">
+                                        <img src="./imagenes_instalaciones/sala_actividades.webp" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Musculación">
                                         <span class="badge bg-success position-absolute top-0 end-0 m-3">Operativo</span>
                                     </div>
                                     <div class="card-body">
@@ -926,7 +978,7 @@
                             <div class="col-md-6">
                                 <div class="card shadow-sm h-100 border-0">
                                     <div class="position-relative">
-                                        <img src="/imagenes_instalaciones/zona_cardio.png" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Piscina">
+                                        <img src="./imagenes_instalaciones/zona_cardio.png" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Piscina">
                                         <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">Limpieza en curso</span>
                                     </div>
                                     <div class="card-body">
