@@ -5,16 +5,16 @@ Este repositorio contiene el desarrollo de una solucion web completa para el cen
 Para mostrar la evolucion del trabajo, el repositorio se ha dividido en tres carpetas principales:
 
 **Ejercicio 1:** 
-Desarrollo inicial de la Home Publica.
+Desarrollo inicial de la Home Publica. En esta fase, el contenido se centro en la tematica de viajes.
 
 **Ejercicio 2:**
-Desarrollo inicial del Panel de Administracion (Dashboard).
+Desarrollo inicial del Panel de Administracion (Dashboard). En esta fase se cambio el enfoque hacia la tematica de gimnasio.
 
 **Proyecto Completo (Final):** 
-Version unificada y corregida. En esta carpeta, index.html y admin.html estan interconectados, permitiendo navegar entre la zona publica y la privada de forma fluida.
+Version unificada y corregida (bajo la identidad de GYM RUBENS). En esta carpeta, index.html y admin.html estan interconectados, permitiendo navegar entre la zona publica y la privada de forma fluida.
 
 ## 1. Home Publica (index.html)
-Se ha diseñado una pagina de aterrizaje enfocada en la captacion de clientes y presentacion de servicios.
+Se ha diseñado una pagina enfocada en la captacion de clientes y presentacion de servicios.
 
 **Caracteristicas tecnicas:**
 - Navegacion: Menu superior fijo (sticky-top) con buscador integrado y selector de idiomas mediante desplegables.
@@ -29,7 +29,7 @@ Interfaz diseñada para la gestion interna del gimnasio, permitiendo al administ
 
 **Herramientas incluidas:**
 - Layout Profesional: Menu lateral persistente (sidebar) y sistema de Breadcrumbs para facilitar la navegacion.
-- Monitorizacin en Tiempo Real: * Barras de Progreso: Indicadores de color (verde, amarillo, rojo) para el control de aforo en las salas.
+- Monitorizacin en Tiempo Real: Indicadores de color (verde, amarillo, rojo) para el control de aforo en las salas.
 - Tablas Dinamicas: Gestion de inventario y tienda con diseño table-responsive.
 - Interactividad avanzada: * Uso de Modales para visualizar el listado de Staff sin cambiar de vista.
 - Implementacion de Popovers y Tooltips para mostrar especificaciones tecnicas y ayuda rapida al usuario.
