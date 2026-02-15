@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM RUBENS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .carousel-item-2 img {
+            height: 700px;
+            width: 600px;
+            object-fit: cover;
+        }
+        .imagenes_destino{
+            object-fit: cover;
+            height: 250px;
+            border-radius: 2px;
+        }
+        
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./imagen_logo/logo_gimnasio.png" alt="logo home" width="40px" height="40px">
+                GYM RUBENS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pie_de_pagina">
+                            Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#acceso_a_tu_cuenta">
+                            Area Socios
+                        </a>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nuestras Clases
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#container_de_carrusel">
+                                    Musculacion
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Crossfit & HIIT
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Yoga & Pilates
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#ofertas_especiales">
+                                    Reto 90 Dias
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <form class="d-flex me-3">
+                        <input class="form-control me-2" type="search" placeholder="Buscar clase..." aria-label="Search"/>
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                    <div class="nav-item dropdown navbar-nav">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Idiomas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img class="me-3" src="./imagenes/bandera_españa.jpg" alt="ES" width="20px" height="20px">
+                                    ES
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img class="me-3" src="./imagenes/bandera_ing.jpg" alt="EN" width="20px" height="20px">
+                                    EN
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img class="me-3" src="./imagenes/bandera_francia.png" alt="FR" width="20px" height="20px">
+                                    FR
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1">
+        <div class="container" id="container_de_carrusel">
+            <div class="container text-center animate__animated animate__fadeInDown" style="margin-top: 50px; margin-bottom: 30px;">
+                <h1 class="display-4 fw-bold">GYM RUBENS</h1>
+                <p class="lead text-secondary fst-italic">No cuentes los dias, haz que los dias cuenten.</p>
+            </div>
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active carousel-item-2">
+                        <img src="./imagenes/imagen_gimnasio_nueva_1.jpg" class="d-block w-100" alt="imagen_gimnasio_nueva_1">
+                    </div>
+                    <div class="carousel-item carousel-item-2">
+                        <img src="./imagenes/imagen_gimnasio_nueva_2.jpg" class="d-block w-100" alt="imagen_gimnasio_nueva_2">
+                    </div>
+                    <div class="carousel-item carousel-item-2">
+                        <img src="./imagenes/imagen_gimnasio_nueva_3.jpg" class="d-block w-100" alt="imagen_gimnasio_nueva_3">
+                    </div>
+                    <div class="carousel-item carousel-item-2">
+                        <img src="./imagenes/imagen_gimnasio_nueva_4.jpg" class="d-block w-100" alt="imagen_gimnasio_nueva_4">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="container my-5" id="servicios_gym">
+
+                <div class="container text-center animate__animated animate__bounce" style="margin: 10px;">
+                    <h1 class="display-4 fw-bold">ENTRENA SIN LIMITES</h1>
+                </div>
+
+                <div class="row align-items-center rounded mb-5 bg-white shadow-sm">
+                    <div class="col-md-6 px-0">
+                        <img src="./imagenes/imagen_zona_peso_libre.jpg" style="height: 400px; object-fit: cover;" class="img-fluid w-100 rounded-start" alt="Sala de musculacion Rubens">
+                    </div>
+                    <div class="col-md-6 p-5">
+                        <h3>Zona de Peso Libre y Maquinas</h3>
+                        <p>
+                            Disfruta de una experiencia de entrenamiento unica con nuestra oferta estrella. 
+                            Inscribete ahora en nuestra sala de musculacion y llevate el primer mes de 
+                            entrenamiento personalizado ¡totalmente gratis! Todo incluido: acceso 24h, 
+                            plan de rutina y asesoramiento inicial.
+                        </p>
+                        <button class="btn btn-outline-danger">
+                            Ver disponibilidad
+                        </button>
+                    </div>
+                </div>
+
+                <div class="container my-5">
+                    <div class="row align-items-center rounded bg-white shadow-sm">
+                        <div class="col-md-6 px-0">
+                            <img src="./imagenes/imagen_sala_boxeo.jpg" style="height: 400px; object-fit: cover;" class="img-fluid w-100 rounded-start" alt="Clases colectivas Rubens">
+                        </div>
+                        <div class="col-md-6 p-5">
+                            <h3>Crossfit y Boxeo de Alta Intensidad</h3>
+                            <p>Explora tu fuerza indomable en nuestras clases colectivas. Entrena entre 
+                            compañeros de alto nivel en un ambiente diseñado para los amantes de la 
+                            adrenalina, la superacion personal y el aire puro de nuestra terraza exterior.</p>
+                            <button class="btn btn-outline-danger">Ver disponibilidad</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-5">
+                <div class="container text-center animate__animated animate__bounce" style="margin: 10px;">
+                    <h1 class="display-4 fw-bold">Entrena al maximo en GYM RUBENS</h1>
+                </div>
+                
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <img src="./imagenes/imagen_sala_musculacion.jpg" class="card-img-top img-fluid imagenes_destino w-100" alt="Musculacion">
+                                <h5 class="mt-4 text-uppercase fw-bold">Musculacion</h5>
+                                <small class="text-secondary">Fuerza y potencia</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <img src="./imagenes/imagen_sala_cardio.jpg" class="card-img-top img-fluid imagenes_destino w-100" alt="Zona Cardio">
+                                <h5 class="mt-4 text-uppercase fw-bold">Zona Cardio</h5>
+                                <small class="text-secondary">Resistencia sin limites</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <img src="./imagenes/imagen_ring_boxeo.jpg" class="card-img-top img-fluid imagenes_destino w-100" alt="Boxeo">
+                                <h5 class="mt-4 text-uppercase fw-bold">Ring Boxeo</h5>
+                                <small class="text-secondary">Disciplina y tecnica</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <img src="./imagenes/imagen_cross_training.jpg" class="card-img-top img-fluid imagenes_destino w-100" alt="Crossfit">
+                                <h5 class="mt-4 text-uppercase fw-bold">Cross Training</h5>
+                                <small class="text-secondary">Superacion diaria</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5" id="ofertas_especiales">
+
+            <div class="container text-center animate__animated animate__bounce" style="margin: 10px;">
+                <h1 class="display-4 fw-bold">Reto Destacado</h1>
+                <p class="lead text-secondary italic">Transformacion Total - Edicion 2026</p>
+            </div>
+
+            <div class="row g-4"> 
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-lg">
+                        <img src="./imagenes/imagen_gimnasio_nueva_6.jpg" class="card-img-top w-100" style="height: 400px; object-fit: cover;" alt="Reto Gym Rubens">
+                        <div class="card-body bg-dark text-white text-center">
+                            <h3>¡Tu Cambio Radical Todo Incluido!</h3>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-lg">
+                        <div class="card-body">
+                            <div class="tab-content" id="mi_tabla_contenidos">
+                                <ul class="nav nav-tabs flex-column flex-sm-row">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#info">Sobre la Clase</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#itinerario">Planificacion</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#precios">Cuotas</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="info">
+                                        <h3 class="mt-3 mb-2">Detalles del programa</h3>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="bi-1-circle-fill me-2"></i>Evaluacion fisica y nutricional inicial</li>
+                                            <li class="mb-2"><i class="bi-2-circle-fill me-2"></i>Entrenador personal asignado 24/7</li>
+                                            <li class="mb-2"><i class="bi-3-circle-fill me-2"></i>Acceso premium a todas las clases</li>
+                                            <li class="mb-2"><i class="bi-4-circle-fill me-2"></i>Suplementacion basica incluida</li>
+                                        </ul>
+                                        <button class="btn btn-sm btn-dark mt-2">Descargar PDF del Plan</button>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="itinerario">
+                                        <h3 class="mb-3 mt-3">Tu ruta al exito</h3>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <span class="badge text-bg-danger">Mes 1</span>
+                                                <div><strong>Adaptacion:</strong> Tecnica de base y acondicionamiento metabolico.</div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="badge text-bg-danger">Mes 2</span>
+                                                <div><strong>Intensidad:</strong> Hipertrofia y quema de grasa maxima.</div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <span class="badge text-bg-danger">Mes 3</span>
+                                                <div><strong>Definicion:</strong> Puesta a punto y mantenimiento de resultados.</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="precios">
+                                        <h3 class="mb-3 mt-3">Tarifas del Reto</h3>
+                                        <div class="table-responsive">
+                                            <table class="table align-middle">
+                                                <thead class="table-dark" style="border: 2px solid;">
+                                                    <tr class="text-white text-center">
+                                                        <th scope="col">Plan</th>
+                                                        <th scope="col">Servicios</th>
+                                                        <th scope="col">Precio</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center">
+                                                    <tr style="border: 2px solid;">
+                                                        <th scope="col"><strong>Basico</strong></th>
+                                                        <td>Gimnasio + App</td>
+                                                        <td>49€/mes</td>
+                                                        <td><button class="btn btn-sm btn-outline-dark">Elegir</button></td>
+                                                    </tr>
+                                                    <tr style="border: 2px solid;">
+                                                        <th scope="col"><strong>Pro</strong></th>
+                                                        <td>Basico + Dieta</td>
+                                                        <td>65€/mes</td>
+                                                        <td><button class="btn btn-sm btn-outline-dark">Elegir</button></td>
+                                                    </tr>
+                                                    <tr style="border: 2px solid;">
+                                                        <th scope="col"><strong>Elite</strong></th>
+                                                        <td>Entrenador Personal</td>
+                                                        <td>120€/mes</td>
+                                                        <td><button class="btn btn-sm btn-outline-dark">Elegir</button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5" id="acceso_a_tu_cuenta">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3 class="text-center">
+                        <i class="bi bi-person-circle"></i>
+                        Acceso cliente
+                    </h3>
+                    <form>
+                        <div class="mt-4">
+                            <label class="form-label"></label>
+                            <input type="email" class="form-control" placeholder="Introduce tu email">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label"></label>
+                            <input type="password" class="form-control" placeholder="Introduce tu contraseña">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100">
+                            Entrar a mi GYM RUBENS
+                        </button>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <a href="admin.html" class="text-secondary small text-decoration-none">
+                            Acceso Personal (Admin)
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3 class="text-center mb-3">Donde estamos</h3>
+                    <div class="ratio ratio-4x3 position-relative">
+                        <img src="./imagenes/imagen_mapa.png" style="object-fit: contain;" alt="Mapa Europa" height="100%">
+
+                            <i class="bi bi-pin-map-fill text-danger fs-3 animate__animated animate__bounce animate__infinite"
+                            data-bs-toggle="popover" title="Sede Paris"
+                            style="position: absolute; top: 69%; left:40%;"></i>
+                        
+                            <i class="bi bi-pin-map-fill text-danger fs-3 animate__animated animate__bounce animate__infinite"
+                            data-bs-toggle="popover" title="Sede Barcelona"
+                            style="position: absolute; top:79%; left:40%;"></i>
+
+                            <i class="bi bi-pin-map-fill text-danger fs-3 animate__animated animate__bounce animate__infinite"
+                            data-bs-toggle="popover" title="Sede Madrid"
+                            style="position: absolute; top:83%; left:32%;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white" id="pie_de_pagina">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mt-4">GYM RUBENS</h5>
+                    <p class="text-secondary">
+                        Tu centro de alto rendimiento para alcanzar tu mejor version.
+                    </p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mt-4">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Politicas de privacidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Condiciones de uso
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-secondary text-decoration-none">
+                                Trabaja con nosotros
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mt-4">
+                        Contacto
+                    </h5>
+                    <p class="text-secondary">
+                        Calle callen 13, Madrid
+                    </p>
+                    <p class="text-secondary">
+                        900 900 900
+                    </p>
+                </div>
+            </div>
+            <div class="text-center text-secondary">
+                © 2026 GYM RUBENS - Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Activa todos los popovers de la pagina
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+</body>
+</html>
